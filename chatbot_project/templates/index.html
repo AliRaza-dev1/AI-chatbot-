@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Academic Policy Assistant</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+<body>
+
+<div class="app-container">
+    <!-- HEADER -->
+    <div class="app-header">
+        <div class="header-left">
+            <div class="university-logo">🎓</div>
+            <div class="header-title">
+                <h1>Academic Policy Assistant</h1>
+                <p>Student Support Portal - Powered by TF-IDF + SBERT</p>
+            </div>
+        </div>
+    </div>
+
+    <!-- MAIN CONTENT -->
+    <div class="main-content">
+        <!-- SIDEBAR -->
+        <div class="sidebar">
+            <div class="sidebar-section">
+                <div class="sidebar-title">Quick Questions</div>
+                <button class="suggestion-chip" data-q="What is the minimum GPA to pass a semester?">📊 Minimum GPA Requirements</button>
+                <button class="suggestion-chip" data-q="What is the minimum attendance percentage?">📅 Attendance Policy</button>
+                <button class="suggestion-chip" data-q="How many times can I freeze a semester?">⏸ Semester Freeze Info</button>
+                <button class="suggestion-chip" data-q="Can I pay fee in installments?">💰 Fee Payment Options</button>
+                <button class="suggestion-chip" data-q="What is the minimum CGPA for graduation?">🎓 Graduation Requirements</button>
+                <button class="suggestion-chip" data-q="Is internship mandatory for graduation?">💼 Internship Policy</button>
+            </div>
+
+            <div class="info-card">
+                <h3>💡 AI-Powered Search</h3>
+                <p>Using hybrid TF-IDF and SBERT models for better understanding of your questions!</p>
+            </div>
+        </div>
+
+        <!-- CHAT SECTION -->
+        <div class="chat-section">
+            <div class="chat-area" id="chatArea">
+                <div class="message-box bot-message">
+                    <div class="message-content">
+                        Hello! Welcome to the Academic Policy Assistant. I'm using advanced AI (TF-IDF + SBERT) to understand your questions better. How can I help you today?
+                    </div>
+                </div>
+            </div>
+
+            <!-- INPUT AREA -->
+            <div class="input-area">
+                <input type="text" id="messageInput" placeholder="Type your question here...">
+                <button id="sendBtn" class="control-btn" title="Send">📤</button>
+                <button id="voiceBtn" class="control-btn" title="Voice Input">🎤</button>
+                <button id="speakBtn" class="control-btn" title="Speak Response">🔊</button>
+            </div>
+        </div>
+    </div>
+</div>
+
+<script src="{{ url_for('static', filename='script.js') }}"></script>
+</body>
+</html>
